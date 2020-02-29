@@ -91,9 +91,12 @@ h1 .text-linethrough {
 }
 #SOS{
   position: fixed;
-  right: 1rem;
-  bottom: 10vh;
+  left: 10px;
+  bottom: 10px;
 
+}
+#head{
+  position: fixed;
 }
 #dialog-div{
   background-color: #ffffff;
@@ -107,28 +110,17 @@ h1 .text-linethrough {
 }
 
 @media only screen and (max-width: 600px) {
-  h3 {
-    font-size: 120%;
-  }
-h4{
-  font-size: 110%;
-}
 .linkimgs{
   width: 80vw;
 }
 #SOS{
   width: 25%;
+  position: fixed;
+  right: 20vw;
+  bottom: 30vh;
 }
 #head{
-  float: right;
   width: 35vw;
 }
-  #fight{
-display: flex;
- flex-direction: row;
- flex-wrap: wrap;
 }
-}
-p{
-  font-size: medium;
-}
+

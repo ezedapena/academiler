@@ -14,28 +14,51 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBRPTYrGurdv3LGoLbIe3Z7bCSzf1GTiv0",
+  authDomain: "challenge-mil3r.firebaseapp.com",
+  databaseURL: "https://challenge-mil3r.firebaseio.com",
+  projectId: "challenge-mil3r",
+  storageBucket: "challenge-mil3r.appspot.com",
+  messagingSenderId: "501597643651",
+  appId: "1:501597643651:web:e765718303a21aa7b70cb6",
+  measurementId: "G-JY3E9447J4"
+};
+firebase.initializeApp(firebaseConfig);
+
 const app = new Vue({
   el:"#app",
   data:{
     pages:[],
+    database: [],
     current: "principal",
     dialog: ""
-    
   },
   methods:{
     start(){
       app.current = "secondary"
     },
-    html(){
+    async html(){
+        await firebase.database().ref('HTMLInfo/').once('value')
+          .then(function(snapshot){
+              app.database = snapshot.val()
+        })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/html.css"
-
     },
-    css(){
+    async css(){
+      await firebase.database().ref('CSSInfo/').once('value')
+          .then(function(snapshot){
+              app.database = snapshot.val()
+      })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/css.css"
     },
-    js(){
+    async js(){
+      await firebase.database().ref('JSInfo/').once('value')
+          .then(function(snapshot){
+              app.database = snapshot.val()
+      })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/js.css"
     },
@@ -64,7 +87,7 @@ const app = new Vue({
   created(){
     
     async function fetchAll(){
-      let resPages = await fetch("./json/pages.json");
+      let resPages = await fetch("../json/pages.json");
       let json = await resPages.json();
       
       return json
@@ -76,20 +99,17 @@ const app = new Vue({
     })
     
   },
-  computed:{},
 
   components:{
     principal:{
       template:`
       <div class="d-flex justify-content-center flex-wrap">
-        <img src="img/start.png" alt="start button"  onclick="app.start()" class="linkimgs">
+        <img src="img/start.png" alt="start button" onclick="app.start()" class="linkimgs">
         <img src="img/play.png" alt="play button"  class="linkimgs">
-        <img src="img/start.png"  class="linkimgs">
+        <img src="img/start.png" alt="start button" onclick="app.start()" class="linkimgs">
 
-      </div>
-      
+      </div>      
       `
-
     },
     secondary:{
       props:['array'],
@@ -137,7 +157,7 @@ const app = new Vue({
       `
     },
     page:{
-      props:['var'],
+      props:['var','labels'],
       components:{
 
         one:{
@@ -158,22 +178,18 @@ const app = new Vue({
       template:`
       <div class="col-10">
         <div id="vfor">
-        <!-- <div v-for="label in labels" class="divHTML border"> -->
-          <div class="divHTML border">
-            <div class="transparent-shadow"><h3 class="px-5 py-2">label.name</h3></div>
-            
-            <h4 class="px-5 py-2">label.title</h4>
-            <p class="px-5 py-2">label.detail</p>
+          <div v-for="label in labels" class="divHTML border">
+            <div class="transparent-shadow"><h3 class="px-5 py-2">{{label.name}}</h3></div>    
+            <h4 class="px-5 py-2">{{label.title}}</h4>
+            <p class="px-5 py-2">{{label.detail}}</p>
           </div>
         </div>
       
-          <div id="SOS"><component :is="this.var"></component><img src="img/head.png"  onclick="app.help()" id="head"></div>
+        <div id="SOS"><component :is="this.var"></component><img src="img/head.png"  onclick="app.help()" id="head"></div>
         </diV>
       `
     },
-    
-    
-    
+        
   }
   
 })

@@ -74,10 +74,13 @@ h1 .text-linethrough {
   box-shadow:  #292b29 0px 1px 20px 0px;
  
 }
+.linkimgs{
+  width: 30vw;
+}
 #SOS{
   position: fixed;
-  right: 1rem;
-  bottom: 10vh;
+  left: 10px;
+  bottom: 10px;
 
 }
 #dialog-div{
@@ -92,12 +95,6 @@ h1 .text-linethrough {
 }
 
 @media only screen and (max-width: 600px) {
-  h3 {
-    font-size: 120%;
-  }
-h4{
-  font-size: 110%;
-}
 .linkimgs{
   width: 80vw;
 }
@@ -105,9 +102,9 @@ h4{
   width: 25%;
 }
 #head{
-  float: right;
   width: 35vw;
 }
+
   #fight{
 display: flex;
  flex-direction: row;
@@ -116,4 +113,7 @@ display: flex;
 }
 p{
   font-size: medium;
+}
+.transparent-shadow{
+  box-shadow: #292b29 0px 1px 20px 0px;
 }

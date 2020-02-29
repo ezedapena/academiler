@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div id="app" class="bg-light d-flex flex-column justify-content-between">
+  <div id="app" class="d-flex flex-column justify-content-between">
     <nav class="navbar  navbar-light bg-dark navbar-expand-md">
       <a class="navbar-brand mr-4" href="">
         <img id="logo-sm" class="d-none d-sm-inline" src="img/title.png" alt="logo">
@@ -38,7 +38,7 @@
 
     <main class="m-0 flex-grow-1 d-flex flex-wrap align-items-center justify-content-center bg-light">
 
-       <component :is="current" :array="pages" :var="dialog"></component>
+       <component :is="current" :array="pages" :var="dialog" :labels="database"></component>
 
     </main>
 
@@ -74,6 +74,9 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
   <script src="js/main.js"></script>
 </body>
 

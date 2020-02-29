@@ -1,0 +1,134 @@
+
+* {
+  font-family: 'Oxanium' , sans-serif;
+  
+}
+
+
+.bg-purple {
+  background-color: #e6470e;
+}
+
+.btn-purple {
+  color: #fff;
+  background-color: #e6470e;
+  border-color: #e6470e ;
+}
+
+.btn-purple:hover {
+  color: #e6470e;
+  background-color: #edda4a;
+  border-color: #e6470e;
+}
+.linkimgs{
+  width: 30vw;
+}
+#logo-sm{
+  height: 150%;
+}
+#logo {
+  max-height: 70px;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+h4{
+  text-decoration: underline;
+}
+
+body,
+#app {
+  min-height: 100vh;
+  max-height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+.transparent-shadow{
+  box-shadow: #292b29 0px 1px 20px 0px;
+}
+main {
+  height: 100%;
+  background: url("../img/rosa.jpg"), linear-gradient(80deg, #edda4a, #e6470e);
+  /* background-color: hsla(27, 98%, 54%, 0.308); */
+  /* background-image: url("../img/glamorous.svg"); */
+  box-shadow: inset #292b29 0px 1px 20px 0px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+footer a,
+footer a:hover,
+footer a:active,
+footer a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-linethrough {
+  text-decoration: line-through;
+}
+
+h1 .text-linethrough {
+  font-size: 0.75em;
+}
+
+.modal-body img {
+  width: 100px;
+  height: 100px;
+}
+
+.divHTML{
+  color: #fff;
+  margin:5vh 0 ;
+  background-color: #a61f1f;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow:  #292b29 0px 1px 20px 0px;
+ 
+}
+
+.linkimgs{
+  width: 30vw;
+}
+#SOS{
+  position: fixed;
+  right: 1rem;
+  bottom: 10vh;
+
+}
+#dialog-div{
+  background-color: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#fight{
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 120%;
+  }
+h4{
+  font-size: 110%;
+}
+.linkimgs{
+  width: 80vw;
+}
+#SOS{
+  width: 25%;
+}
+#head{
+  float: right;
+  width: 35vw;
+}
+  #fight{
+display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+}
+p{
+  font-size: medium;
+}

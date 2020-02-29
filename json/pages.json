@@ -1,0 +1,25 @@
+{
+  "pages": [{
+      "nombre": "HTML",
+      "bg": "background-image: url('img/redbg.jpg');",
+      "titulo": "Creation of web pages.",
+      "detalle": "HTML basics here, AND FREE!",
+      "url": "./microsites/objetos/index.html"
+    },
+    {
+      "nombre": "CSS",
+      "bg": "background-image: url('img/bluebg.jpg');",
+      "titulo": "Style and design.",
+      "detalle": "Do you want to learn about CSS? Just click here.",
+      "url": "./microsites/htmlcanvas/index.html"
+    },
+    {
+      "nombre": "JavaScript",
+      "bg": "background-image: url('img/yellowbg.jpg');",
+      "titulo": "Logical operation.",
+      "detalle": "If you want to learn basic stuff about JavaScript, you are in the right place.",
+      "url": "./microsites/mediaqueries/index.html"
+    }
+
+  ]
+}

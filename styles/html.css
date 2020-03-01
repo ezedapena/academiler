@@ -1,10 +1,4 @@
 
-* {
-  font-family: 'Oxanium' , sans-serif;
-  
-}
-
-
 .bg-purple {
   background-color: #e6470e;
 }
@@ -20,9 +14,6 @@
   background-color: #edda4a;
   border-color: #e6470e;
 }
-.linkimgs{
-  width: 30vw;
-}
 #logo-sm{
   height: 150%;
 }
@@ -32,9 +23,6 @@
 
 h1 {
   font-size: 1.8em;
-}
-h4{
-  text-decoration: underline;
 }
 
 body,
@@ -55,28 +43,6 @@ main {
   background-attachment: fixed;
   background-size: cover;
 }
-
-footer a,
-footer a:hover,
-footer a:active,
-footer a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.text-linethrough {
-  text-decoration: line-through;
-}
-
-h1 .text-linethrough {
-  font-size: 0.75em;
-}
-
-.modal-body img {
-  width: 100px;
-  height: 100px;
-}
-
 .divHTML{
   color: #fff;
   margin:5vh 0 ;
@@ -86,41 +52,5 @@ h1 .text-linethrough {
  
 }
 
-.linkimgs{
-  width: 30vw;
-}
-#SOS{
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
 
-}
-#head{
-  position: fixed;
-}
-#dialog-div{
-  background-color: #ffffff;
-  border-radius: 10px 10px 10px 10px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-#fight{
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 600px) {
-.linkimgs{
-  width: 80vw;
-}
-#SOS{
-  width: 25%;
-  position: fixed;
-  right: 20vw;
-  bottom: 30vh;
-}
-#head{
-  width: 35vw;
-}
-}
 

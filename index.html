@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Ezequiel Dapena - Leandro Alvarez">
-  <title>MIL3R´s Front-End Guide</title>
-  <link href="styles/style.css" id="cssArchivo" rel="stylesheet" >
+  <title>ACADEMIL3R</title>
+  <link href="styles/style.css" rel="stylesheet" >
+  <link href="" id="cssArchivo" rel="stylesheet" >
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="styles/style.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 
 <body>
   <div id="app" class="d-flex flex-column justify-content-between">
-    <nav class="navbar  navbar-light bg-dark navbar-expand-md">
+    <nav class="navbar  navbar-light bg-dark navbar-expand-md sticky-top">
       <a class="navbar-brand mr-4" href="">
         <img id="logo-sm" class="d-none d-sm-inline" src="img/title.png" alt="logo">
         <img id="logo" class="d-sm-none" src="img/smalltitle.png" alt="logo">
@@ -28,6 +29,7 @@
       </button>
 
       <div class="collapse navbar-collapse " id="navbarToggler">
+        <input class="form-control mr-sm-2 ml-auto my-2 my-lg-0" type="text" name="search" placeholder="Buscar por tema..." v-model="search" id="search">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#references">Help</a>

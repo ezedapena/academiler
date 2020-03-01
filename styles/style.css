@@ -79,7 +79,6 @@ h2{
 p{
   font-size: 125%;
 }
-
 .slide-container{
   margin: 5vh 20vw;
   background-color: #ffffff77;
@@ -90,14 +89,39 @@ p{
 .linkimgs{
   width: 30vw;
 }
-@media only screen and (max-width: 600px) {
-  h3 {
-    font-size: 120%;
-  }
-h4{
-  font-size: 110%;
+#SOS{
+  position: fixed;
+  left: 10vw;
+  bottom: 10vh;
+
 }
+
+#dialog-div{
+  background-color: #ffffff;
+  border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#fight{
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
 .linkimgs{
   width: 80vw;
 }
+h3{
+  font-size: 50%;
 }
+#SOS{
+  width: 25%;
+  right: 15vw;
+  bottom: 15vh;
+}
+#head{
+  width: 35vw;
+}
+}
+
+

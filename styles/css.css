@@ -1,9 +1,4 @@
 
-* {
-  font-family: 'Oxanium' , sans-serif;
-}
-
-
 .bg-purple {
   background-color: #fff;
 }
@@ -19,11 +14,39 @@
   background-color: #a1f0dd;
   border-color: #000000;
 }
-#logo {
-  max-height: 70px;
+
+main {
+  height: 100%;
+  background: url("../img/pluma.jpg"), linear-gradient(45deg, #a1f0dd, #fff);
+  /* background-color: hsla(27, 98%, 54%, 0.308); */
+  /* background-image: url("../img/glamorous.svg"); */
+  box-shadow: inset #292b29 0px 1px 10px 0px;
+  background-attachment: fixed;
+  background-size: cover;
 }
+.divHTML{
+  color: #000000;
+  margin:5vh 0 ;
+  background-color:#1a2c96;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow:  #292b29 0px 1px 20px 0px;
+  border: 2px solid black;
+ 
+}
+
+* {
+  font-family: 'Oxanium' , sans-serif;
+  
+}
+
 .linkimgs{
   width: 30vw;
+}
+#logo-sm{
+  height: 150%;
+}
+#logo {
+  max-height: 70px;
 }
 
 h1 {
@@ -36,89 +59,10 @@ body,
   max-height: 100%;
   min-height: calc(var(--vh, 1vh) * 100);
 }
-
-main {
-  height: 100%;
-  background: url("../img/pluma.jpg"), linear-gradient(45deg, #a1f0dd, #fff);
-  /* background-color: hsla(27, 98%, 54%, 0.308); */
-  /* background-image: url("../img/glamorous.svg"); */
-  box-shadow: inset #292b29 0px 1px 10px 0px;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-footer a,
-footer a:hover,
-footer a:active,
-footer a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.text-linethrough {
-  text-decoration: line-through;
-}
-
-h1 .text-linethrough {
-  font-size: 0.75em;
-}
-.divHTML{
-  color: #000000;
-  margin:5vh 0 ;
-  background-color:#1a2c96;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow:  #292b29 0px 1px 20px 0px;
-  border: 2px solid black;
- 
-}
 .transparent-shadow{
-  box-shadow: #292b29 0px 1px 10px 0px;
-}
-h4{
-  text-decoration: underline;
+  box-shadow: #292b29 0px 1px 20px 0px;
 }
 
-.modal-body img {
-  width: 100px;
-  height: 100px;
-}
-#SOS{
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
 
-}
-#dialog-div{
-  background-color: #ffffff;
-  border-radius: 10px 10px 10px 10px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-#fight{
-  display: flex;
-  flex-direction: column;
-}
 
-@media only screen and (max-width: 600px) {
-  h3 {
-    font-size: 120%;
-  }
-h4{
-  font-size: 110%;
-}
-.linkimgs{
-  width: 80vw;
-}
-#SOS{
-  width: 25%;
-}
-#head{
-  float: right;
-  width: 35vw;
-}
-  #fight{
-display: flex;
- flex-direction: row;
- flex-wrap: wrap;
-}
-}
+

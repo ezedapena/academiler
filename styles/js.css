@@ -1,7 +1,4 @@
 
-* {
-  font-family: 'Oxanium' , sans-serif;
-}
 
 
 .bg-purple {
@@ -20,13 +17,6 @@
   border-color: #f0eca1;
 }
 
-#logo {
-  max-height: 70px;
-}
-
-h1 {
-  font-size: 1.8em;
-}
 
 body,
 #app {
@@ -45,14 +35,6 @@ main {
   background-size: cover;
 }
 
-footer a,
-footer a:hover,
-footer a:active,
-footer a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
 .text-linethrough {
   text-decoration: line-through;
 }
@@ -61,10 +43,6 @@ h1 .text-linethrough {
   font-size: 0.75em;
 }
 
-.modal-body img {
-  width: 100px;
-  height: 100px;
-}
 
 .divHTML{
   color: #000000;
@@ -74,46 +52,24 @@ h1 .text-linethrough {
   box-shadow:  #292b29 0px 1px 20px 0px;
  
 }
-.linkimgs{
-  width: 30vw;
-}
-#SOS{
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
 
+#logo-sm{
+  height: 150%;
 }
-#dialog-div{
-  background-color: #ffffff;
-  border-radius: 10px 10px 10px 10px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-#fight{
-  display: flex;
-  flex-direction: column;
+#logo {
+  max-height: 70px;
 }
 
-@media only screen and (max-width: 600px) {
-.linkimgs{
-  width: 80vw;
-}
-#SOS{
-  width: 25%;
-}
-#head{
-  width: 35vw;
-}
 
-  #fight{
-display: flex;
- flex-direction: row;
- flex-wrap: wrap;
-}
-}
-p{
-  font-size: medium;
+body,
+#app {
+  min-height: 100vh;
+  max-height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 .transparent-shadow{
   box-shadow: #292b29 0px 1px 20px 0px;
 }
+
+
+

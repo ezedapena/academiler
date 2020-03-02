@@ -87,3 +87,13 @@ body,
   display: block;
 }
 
+#nav{
+  height: 10vh;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+
+}
+main{
+  padding-bottom: 10vh;
+}

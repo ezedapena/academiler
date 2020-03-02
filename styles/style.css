@@ -90,17 +90,23 @@ p{
   width: 30vw;
 }
 #SOS{
-  position: fixed;
-  left: 10vw;
+  position: sticky;
+  right: 10vw;
   bottom: 10vh;
-
+  height: 15%;
+}
+#head{
+  width: 15%;
+  bottom: 10vh;
+}
+.width25{
+  width: 25%;
 }
 
-#dialog-div{
-  background-color: #ffffff;
+.dialog-div{
+    background-color: #ffffff;
   border-radius: 10px 10px 10px 10px;
   padding: 5px;
-  margin-bottom: 5px;
 }
 #fight{
   display: flex;
@@ -117,12 +123,25 @@ h3{
 #SOS{
   width: 25%;
   right: 15vw;
-  bottom: 15vh;
+  bottom: 10vh;
 }
 #head{
   width: 35vw;
 }
+.width25{
+  width: 100%;
+}
 
+}
+@media only screen and (max-height: 500px) { 
+  #SOS{
+    width: 25%;
+    right: 15vw;
+    bottom: 10vh;
+  }
+  #head{
+    height: 20vh;
+  }
 }
 #search{
   display: none;

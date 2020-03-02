@@ -11,7 +11,7 @@
 
 .btn-purple:hover {
   color: #e6470e;
-  background-color: #edda4a;
+  background-color: #862b4e;
   border-color: #e6470e;
 }
 #logo-sm{
@@ -36,7 +36,7 @@ body,
 }
 main {
   height: 100%;
-  background: url("../img/rosa.jpg"), linear-gradient(80deg, #edda4a, #e6470e);
+  background: url("../img/cable.jpg"), linear-gradient(80deg, #edda4a, #e6470e);
   /* background-color: hsla(27, 98%, 54%, 0.308); */
   /* background-image: url("../img/glamorous.svg"); */
   box-shadow: inset #292b29 0px 1px 20px 0px;
@@ -55,6 +55,9 @@ main {
 /* Search bar animation */
 
 @media (min-width:768px) {
+  main{
+    background: url("../img/rosa.jpg");
+  }
   #search {
     width: 160px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -67,4 +70,14 @@ main {
 #search{
   display: block;
   
+}
+#nav{
+  height: 10vh;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+
+}
+main{
+  padding-bottom: 10vh;
 }

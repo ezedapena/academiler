@@ -46,6 +46,11 @@ const app = new Vue({
       })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/html.css"
+      document.getElementById("team").className ="d-none"
+      document.getElementById("nav").className ="d-flex justify-content-around align-items-center bg-dark p-1"
+      document.getElementById("html").src ="img/htmlimagechecked.png"
+      document.getElementById("css").src ="img/cssimage.png"
+      document.getElementById("js").src ="img/jsimage.png"
     },
     async css(){
       await firebase.database().ref('CSSInfo/').once('value')
@@ -54,6 +59,12 @@ const app = new Vue({
       })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/css.css"
+      document.getElementById("team").className ="d-none"
+      document.getElementById("nav").className ="d-flex justify-content-around align-items-center bg-dark p-1"
+      document.getElementById("html").src ="img/htmlimage.png"
+      document.getElementById("css").src ="img/cssimagechecked.png"
+      document.getElementById("js").src ="img/jsimage.png"
+      
     },
     async js(){
       await firebase.database().ref('JSInfo/').once('value')
@@ -62,6 +73,11 @@ const app = new Vue({
       })
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/js.css"
+      document.getElementById("team").className ="d-none"
+      document.getElementById("nav").className ="d-flex justify-content-around align-items-center bg-dark p-1"
+      document.getElementById("html").src ="img/htmlimage.png"
+      document.getElementById("css").src ="img/cssimage.png"
+      document.getElementById("js").src ="img/jsimagechecked.png"
     },
     
     help(){
@@ -100,6 +116,14 @@ const app = new Vue({
       
     })
     
+  }
+  ,
+  computed:{
+    filterTitle(){ 
+      return this.database.filter(data => {
+        return data.title.toLowerCase().match(this.search.toLowerCase())
+      })
+    }
   },
   
   components:{
@@ -163,16 +187,16 @@ const app = new Vue({
       components:{
         
         one:{
-          template: `<div id="dialog-div"><p>Hey you! <br> I´m Captain Miler</p></div>`
+          template: `<div class="dialog-div width25"><p>Hey you! <br> I´m Captain Miler</p></div>`
         },
         two:{
-          template: `<div id="dialog-div"><p>I need your help!<br> Did you study enough?</p></div>`
+          template: `<div class="dialog-div width25"><p>I need your help!<br> Did you study enough?</p></div>`
         },
         three:{
-          template:`<div id="dialog-div"><p> Mr. Code is back! <br>Are you ready to face him?</p></div>`
+          template:`<div class="dialog-div width25"><p> Mr. Code is back! <br>Are you ready to face him?</p></div>`
         },
         question:{
-          template: `<div id="fight"><button type="button" class="btn btn-success" href="">Let's go get him!</button>
+          template: `<div id="fight" class="width25"><button type="button" class="btn btn-success" href="">Let's go get him!</button>
           <button type="button" class="btn btn-danger" onclick="app.cancel()">No, Let me study more</button></div>`
         }
       },
@@ -192,13 +216,7 @@ const app = new Vue({
       `
     }
     
-  },
-  computed:{
-    filterTitle(){ 
-      this.database = this.database.filter(data => {
-        return data.title.toLowerCase().match(this.search.toLowerCase())
-      })
-    }
   }
+
   
 })

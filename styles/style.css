@@ -107,7 +107,7 @@ p{
   flex-direction: column;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 .linkimgs{
   width: 80vw;
 }
@@ -122,6 +122,10 @@ h3{
 #head{
   width: 35vw;
 }
+
+}
+#search{
+  display: none;
 }
 
 

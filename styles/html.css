@@ -52,5 +52,19 @@ main {
  
 }
 
+/* Search bar animation */
 
-
+@media (min-width:768px) {
+  #search {
+    width: 160px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: flex-grow 0.4s ease-in-out;
+  }
+  #search:focus {
+    flex-grow: 1;
+  }
+}
+#search{
+  display: block;
+  
+}

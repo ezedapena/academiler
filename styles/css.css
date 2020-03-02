@@ -63,6 +63,20 @@ body,
   box-shadow: #292b29 0px 1px 20px 0px;
 }
 
+/* Search bar animation */
 
+@media (min-width:768px) {
+  #search {
+    width: 160px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: flex-grow 0.4s ease-in-out;
+  }
+  #search:focus {
+    flex-grow: 1;
+  }
+}
+#search{
+  display: block;
+}
 
 

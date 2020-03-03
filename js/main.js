@@ -121,7 +121,7 @@ const app = new Vue({
   created(){
     
     async function fetchAll(){
-      let resPages = await fetch("../json/pages.json");
+      let resPages = await fetch("/../json/pages.json");
       let json = await resPages.json();
       
       return json

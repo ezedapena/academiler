@@ -33,17 +33,26 @@ const app = new Vue({
     pages:[],
     database: [],
     current: "principal",
-    dialog: ""
+    dialog: "",
+    pagImgRute: {},
+    key: "",
+    key2: ""
   },
   methods:{
-    start(){
+   async start(){
       app.current = "secondary"
+      await firebase.database().ref('pagesImgsRutes/').once('value')
+      .then(function(snapshot){
+        app.pagImgRute = snapshot.val()
+      })
     },
     async html(){
       await firebase.database().ref('HTMLInfo/').once('value')
       .then(function(snapshot){
         app.database = snapshot.val()
       })
+      app.key="HTML"
+      app.key2="HTMLInfo"
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/html.css"
       document.getElementById("team").className ="d-none"
@@ -51,12 +60,15 @@ const app = new Vue({
       document.getElementById("html").src ="img/htmlimagechecked.png"
       document.getElementById("css").src ="img/cssimage.png"
       document.getElementById("js").src ="img/jsimage.png"
+     // document.getElementById("intro").src ="img/htmlimagechecked.png"
     },
     async css(){
       await firebase.database().ref('CSSInfo/').once('value')
       .then(function(snapshot){
         app.database = snapshot.val()
       })
+      app.key="CSS"
+      app.key2="CSSInfo"
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/css.css"
       document.getElementById("team").className ="d-none"
@@ -64,6 +76,7 @@ const app = new Vue({
       document.getElementById("html").src ="img/htmlimage.png"
       document.getElementById("css").src ="img/cssimagechecked.png"
       document.getElementById("js").src ="img/jsimage.png"
+   //  document.getElementById("intro").src ="img/cssimagechecked.png"
       
     },
     async js(){
@@ -71,6 +84,8 @@ const app = new Vue({
       .then(function(snapshot){
         app.database = snapshot.val()
       })
+      app.key="JS"
+      app.key2="JSInfo"
       app.current = "page"
       document.getElementById("cssArchivo").href="styles/js.css"
       document.getElementById("team").className ="d-none"
@@ -78,6 +93,7 @@ const app = new Vue({
       document.getElementById("html").src ="img/htmlimage.png"
       document.getElementById("css").src ="img/cssimage.png"
       document.getElementById("js").src ="img/jsimagechecked.png"
+//      document.getElementById("intro").src="img/jsimagechecked.png"
     },
     
     help(){
@@ -131,8 +147,8 @@ const app = new Vue({
       template:`
       <div class="d-flex justify-content-center flex-wrap">
       <img src="img/start.png" alt="start button" onclick="app.start()" class="linkimgs">
-      <img src="img/play.png" alt="play button"  class="linkimgs">
-      <img src="img/developers.png" alt="start button" onclick="app.start()" class="linkimgs">
+      <a href="game/game.html"><img src="img/play.png" alt="play button"  class="linkimgs"></a>
+      <a href="https://ezedapena.github.io/mil3r/" target="_new"><img src="img/developers.png" alt="developers button"class="linkimgs"></a>
       
       </div>      
       `
@@ -151,21 +167,21 @@ const app = new Vue({
       <div class="carousel-inner">
       <div class="carousel-item active slide" id="linkHTML" :style="array[0].bg">
       <div class="d-flex justify-content-center flex-column align-items-center slide-container" onclick="app.html()">
-      <img src="img/htmlogo.png" class="imgResponsive">
-      <img src="img/htmlimage.png" height="50%">
+      <img src="img/htmlogo.png" class="imgResponsive" alt="go html!">
+      <img src="img/htmlimage.png" height="50%" alt="go html!">
       </div>
       </div>
       <div class="carousel-item slide" id="linkCSS" :style="array[1].bg">
       <div class="d-flex justify-content-center flex-column align-items-center slide-container" onclick="app.css()">
-      <img src="img/csslogo.png" class="imgResponsive">
-      <img src="img/cssimage.png" height="50%">
+      <img src="img/csslogo.png" class="imgResponsive" alt="go css!">
+      <img src="img/cssimage.png" height="50%" alt="go css!">
       
       </div>
       </div>
       <div class="carousel-item slide" id="linkJS" :style="array[2].bg">
       <div class="d-flex justify-content-center flex-column align-items-center slide-container" onclick="app.js()">
-      <img src="img/jslogo.png" class="imgResponsive">
-      <img src="img/jsimage.png" height="50%">
+      <img src="img/jslogo.png" class="imgResponsive" alt="go js!">
+      <img src="img/jsimage.png" height="50%" alt="go js!">
       
       </div>
       </div>
@@ -183,7 +199,7 @@ const app = new Vue({
       `
     },
     page:{
-      props:['var','labels'],
+      props:['var','labels','imgRute','clave','clave2'],
       components:{
         
         one:{
@@ -196,7 +212,7 @@ const app = new Vue({
           template:`<div class="dialog-div width25"><p> Mr. Code is back! <br>Are you ready to face him?</p></div>`
         },
         question:{
-          template: `<div id="fight" class="width25"><button type="button" class="btn btn-success" href="">Let's go get him!</button>
+          template: `<div id="fight" class="width25"><button type="button" class="btn btn-success" onclick="window.location.href = 'game/game.html';">Let's go get him!</button>
           <button type="button" class="btn btn-danger" onclick="app.cancel()">No, Let me study more</button></div>`
         }
       },
@@ -204,6 +220,10 @@ const app = new Vue({
       template:`
       <div class="col-12">
       <div>
+      <div class="d-flex justify-content-center"><img id="intro" :src="imgRute[clave]"></div>
+      <div class="divHTML border p-2">
+        <p>{{imgRute[clave2]}}</p>
+      </div>
       <div v-for="label in labels" class="divHTML border">
       <div class="transparent-shadow"><h3 class="px-5 py-2">{{label.title}}</h3></div>    
       <h4 class="px-5 py-2">{{label.name}}</h4>

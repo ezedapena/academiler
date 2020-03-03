@@ -40,16 +40,16 @@
 
     <main class="m-0 flex-grow-1 d-flex flex-wrap align-items-center justify-content-center bg-light">
 
-       <component :is="current" :array="pages" :var="dialog" :labels="filterTitle"></component>
+       <component :is="current" :array="pages" :var="dialog" :labels="filterTitle" :img-rute="pagImgRute" :clave="key" :clave2="key2"></component>
 
     </main>
 
     <footer class="bg-dark text-white text-center p-1">
       <p id="team">"Team MIL3R - &#x1F1E6;&#x1F1F7; - &copy; 2020"</p>
       <div id="nav" class="d-none justify-content-around align-items-center bg-dark p-1"> 
-        <img src="img/htmlimage.png" id="html" height="80%" onclick="app.html()">
-        <img src="img/cssimage.png" id="css" height="80%" onclick="app.css()">
-        <img src="img/jsimage.png" id="js" height="80%" onclick="app.js()">
+        <img src="img/htmlimage.png" id="html" height="80%" onclick="app.html()" alt="HTML start">
+        <img src="img/cssimage.png" id="css" height="80%" onclick="app.css()" alt="CSS start">
+        <img src="img/jsimage.png" id="js" height="80%" onclick="app.js()" alt="JS start">
       </div>
   </footer>
   

@@ -112,6 +112,10 @@ p{
   display: flex;
   flex-direction: column;
 }
+#intro{
+  height: 20vh;
+  margin: 10px;
+}
 
 @media only screen and (max-width: 768px) {
 .linkimgs{
@@ -128,6 +132,7 @@ h3{
 #head{
   width: 35vw;
 }
+
 .width25{
   width: 100%;
 }

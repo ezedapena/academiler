@@ -1,0 +1,245 @@
+body {
+	background-image: url("../img/fondeishon.gif")
+}
+header{
+	margin: 0;
+	width: 100%;
+	height: 80px;
+}
+header a{
+		font-family: 'Press Start 2P';
+		text-shadow: 0 1px 0 #E50E0E, 
+               0 2px 0 #CF0F0F,
+               0 3px 0 #C01010,
+               0 4px 0 #9B0E0E,
+               0 5px 0 #6C0A0A,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+#preg{
+	display: grid;
+	grid-template-areas: 
+	'pregunta',
+	'respuestas';
+	/*'boton';*/
+	padding: 4vw;
+	grid-gap:2vw;
+
+	 
+	width: 100%;
+	height: 40vh;
+	background-image: url("../img/madera.gif");
+	font-family: 'Press Start 2P';
+}
+@font-face {
+  font-family: pixel;
+  src: url("Pixelmania.ttf");
+}
+#timer{
+	position: absolute;
+	left:45vw;
+	top:45vh;
+	font-size: 14vw;
+	font-family: 'Press Start 2P';
+		text-shadow: 0 1px 0 #E50E0E, 
+               0 2px 0 #CF0F0F,
+               0 3px 0 #C01010,
+               0 4px 0 #9B0E0E,
+               0 5px 0 #6C0A0A,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+#pregunta{
+	overflow: auto;
+	grid-area: pregunta;
+	height: 30%;
+	width: 100%;
+	font-size: 4vw;
+	color:white;
+	text-shadow: 0 1px 0 #E50E0E, 
+               0 2px 0 #CF0F0F,
+               0 3px 0 #C01010,
+               0 4px 0 #9B0E0E,
+               0 5px 0 #6C0A0A,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    text-align: center;
+    /*margin-bottom: 4vw;*/
+}
+#res {
+	overflow: auto;
+	height: 70%;
+	width: 100%;
+	grid-area: respuestas;
+	display:grid;
+	grid-template-areas: 
+	're1'
+	're2'
+	're3'
+	're4';
+	grid-gap: 1vw;
+	/*margin-bottom: 4vw;*/
+	text-shadow: 0.1em 0.1em 0.1em #600;
+	font-size:2vh;
+	color:white;
+}
+	#res p{
+		background-image: url("../img/asd.jpg");
+	}
+#l0{
+	grid-area:re1;
+	text-align:center;
+}
+#l1{
+	grid-area:re2;
+	text-align:center;
+}
+#l2{
+	grid-area:re3;
+	text-align:center;
+}
+#l3{
+	grid-area:re4;
+	text-align:center;
+}
+#res label{
+	/*margin-bottom: 2vw;*/
+}
+/*#contestar{
+	grid-area: boton;
+}*/
+[type=radio] { 
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+[type=radio] {
+	cursor: pointer;
+}
+[type=radio]:checked + label {
+	outline: 2px solid #889ec2;
+}
+#logo{
+	width: 60px;
+}
+#contain{
+		grid-template-columns: 60vw 40vw;
+		grid-template-rows: auto; 
+		grid-template-areas: "canvas body";
+}
+#canvas{
+	width: 100%;
+	height: 50vh;
+}
+#canvasDiv{
+	width: 100%;
+	height: 50vh;
+}
+#botones{
+	height: 80vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+}
+#botones img{
+	width: 50vw;
+	height: 40vw;
+}
+#texto{
+	color:white;
+	font-size: 10vw;
+		text-shadow: 0 1px 0 #E50E0E, 
+               0 2px 0 #CF0F0F,
+               0 3px 0 #C01010,
+               0 4px 0 #9B0E0E,
+               0 5px 0 #6C0A0A,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    text-align: center;
+    font-family: 'Press Start 2P';
+    background-image: url("../img/madera.gif");
+}
+@media only screen and (orientation:landscape){
+	body{
+		background-image: url("../img/gif.gif");
+	}
+	#canvas{
+		width: 100%;
+		height: 80vh;
+	}
+	#canvasDiv{
+		width: 60vw;
+		height: 80vh;
+	}
+	#pregunta{
+	overflow: auto;
+	height: 50%;
+	width: 100%;
+		font-size: 2vw;
+	}
+	#preg {
+		width: 35vw;
+		height: 80vh;
+	}
+	#texto{
+		font-size: 10vh;
+	}
+	#res{
+	overflow: auto;
+	height: 50%;
+	width: 100%;
+		font-size:1.5vw;
+	}
+	#botones{
+		justify-content: space-around;
+		flex-direction: row;
+	}
+	#botones img{
+	width: 30vw;
+	height: 25vw;
+}
+	#timer{
+		left:25vw;
+		top:60vh;
+		font-size: 8vw;
+	}
+}
+/*@media only screen and (orientation:landscape){
+	body{
+		background-image: url("fondo.jpg");
+	}
+	#canvas{
+		width: 100%;
+		height: 80vh;
+	}
+	#canvasDiv{
+		width: 60vw;
+		height: 80vh;
+	}
+	#preg {
+		width: 35vw;
+		height: 80vh;
+	}
+}*/
